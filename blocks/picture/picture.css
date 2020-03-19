@@ -1,0 +1,10 @@
+.picture {
+    max-width: 80vw;
+    max-height: 80vh;
+    background-repeat: no-repeat;
+}
+
+.picture-container {
+    position: relative;
+    padding: 5px;
+}
