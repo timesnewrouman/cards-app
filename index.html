@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="style.87168bbcefe79d0641a8.css">
+</head>
+
+<body>
+  <div class="root">
+    <header class="header root__section">
+      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+    </header>
+    <div class="profile root__section">
+      <div class="user-info">
+        <div class="user-info__photo"></div>
+        <div class="user-info__data">
+          <h1 class="user-info__name"></h1>
+          <p class="user-info__job"></p>
+          <button class="button user-info__edit">Edit</button>
+        </div>
+        <button class="button user-info__button">+</button>
+      </div>
+    </div>
+    <div class="places-list root__section">
+    </div>
+    <div class="popup popup__picture">
+      <div class="picture-container">
+        <img src="./images/close.svg" alt="" class="popup__close">
+        <img class="picture">
+      </div>
+    </div>
+    <div class="popup popup__avatar">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close">
+        <h3 class="popup__title">Обновить аватар</h3>
+        <form class="popup__form" name="avatar">
+          <div class='input-container'>
+            <input type="url" name="avatar" class="popup__input popup__input_type_avatar" placeholder="Ссылка на аватар"
+              required minlength="2">
+            <div class="error" aria-live="polite"></div>
+          </div>
+          <button type="submit" id="+" class="button popup__button popup__button_save">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup popup_add">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close">
+        <h3 class="popup__title">Новое место</h3>
+        <form class="popup__form" name="new">
+          <div class='input-container'>
+            <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Название" required
+              maxlength="30" minlength="2">
+            <div class="error" aria-live="polite"></div>
+          </div>
+          <div class='input-container'>
+            <input type="url" name="link" class="popup__input popup__input_type_link-url"
+              placeholder="Ссылка на картинку" required minlength="2">
+            <div class="error" aria-live="polite"></div>
+          </div>
+          <button type="submit" id="+" class="button popup__button">+</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup popup_edit">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close">
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form class="popup__form" name="edit">
+          <div class='input-container'>
+            <input type="text" id="name2" name="name2" class="popup__input popup__input_type_name2" placeholder="Имя"
+              required maxlength="30" minlength="2">
+            <div class="error" aria-live="polite"></div>
+          </div>
+          <div class='input-container'>
+            <input type="text" id="about" name="about" class="popup__input popup__input_type_about" placeholder="О себе"
+              required maxlength="30" minlength="2">
+            <div class="error" aria-live="polite"></div>
+          </div>
+          <button type="submit" id="save" class="button popup__button popup__button_save">Сохранить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="main.ad2a073f77ee2c2647a0.js"></script>
+</body>
+
+</html>
