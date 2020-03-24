@@ -1,4 +1,4 @@
-class Api {
+export class Api {
     constructor(serverAddress, authorizationToken) {
         this.server = serverAddress;
         this.token = authorizationToken;

@@ -1,4 +1,4 @@
-class CardList {
+export class CardList {
   constructor(container, createCard, api, userInfo) {
     this.container = container;
     this.createCard = createCard;
@@ -12,17 +12,15 @@ class CardList {
   }
 
   render() {
-    api.getInitialCards()
+    this.api.getInitialCards()
       .then(result => {
         for (let i = 0; i < result.length; i++) {
-          if (result[i].owner._id === userInfo.userId) {
+          if (result[i].owner._id === this.userInfo.userId) {
             result[i].cardId = result[i]._id;
             // Можно без перебора в одну строку практически
             // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
             for (let x = 0; x < result[i].likes.length; x++) {
-              if (result[i].likes[x]._id === userInfo.userId) {
-                // Можно лучше
-                // Чем вам true не угодил?)))
+              if (result[i].likes[x]._id === this.userInfo.userId) {
                 result[i].liked = '+';
               }
             }

@@ -1,3 +1,11 @@
+import '../pages/index.css';
+import {Api} from './Api.js';
+import {Card} from './Card.js';
+import {CardList} from './CardList.js';
+import {FormValidator} from './FormValidator.js';
+import {Popup} from './Popup.js';
+import {UserInfo} from './UserInfo.js';
+
 const placesList = document.querySelector('.places-list');
 const addButton = document.querySelector('.user-info__button');
 const editButton = document.querySelector('.user-info__edit');
@@ -13,7 +21,7 @@ const userPhoto = document.querySelector('.user-info__photo');
 const userName = document.querySelector('.user-info__name');
 const userAbout = document.querySelector('.user-info__job');
 
-const ERROR_MESSAGES = {
+export const ERROR_MESSAGES = {
   valueMissing: 'Это обязательное поле',
   tooShort: 'Должно быть от 2 до 30 символов',
   typeMismatch: 'Здесь должна быть ссылка'
