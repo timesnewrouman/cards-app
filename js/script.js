@@ -29,7 +29,7 @@ export const ERROR_MESSAGES = {
 
 const serverAddress = 'https://praktikum.tk/cohort8';
 const authorizationToken = 'a4338a35-a4f2-46d7-8cab-e17ed8973606';
-const api = new Api(serverAddress, authorizationToken);
+export const api = new Api(serverAddress, authorizationToken);
 const createCard = (args) => new Card(args);
 const userInfo = new UserInfo(userPhoto, userName, userAbout, api);
 export const cardList = new CardList(placesList, createCard, api, userInfo);

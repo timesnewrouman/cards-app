@@ -1,3 +1,5 @@
+import {api} from "./script.js";
+
 export class Card {
   constructor(data) {
     this.data = data;
