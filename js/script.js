@@ -1,4 +1,6 @@
 import '../pages/index.css';
+import '../images/logo.svg';
+import '../images/close.svg';
 import {Api} from './Api.js';
 import {Card} from './Card.js';
 import {CardList} from './CardList.js';
