@@ -1,4 +1,4 @@
-import {ERROR_MESSAGES} from "./script.js";
+import { ERROR_MESSAGES } from "./script.js";
 
 export class FormValidator {
     static checkInputValidity(input, error) {

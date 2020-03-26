@@ -1,4 +1,4 @@
- export class UserInfo {
+export class UserInfo {
     constructor(avatar, nameContainer, aboutContainer, api) {
         this.nameContainer = nameContainer;
         this.aboutContainer = aboutContainer;

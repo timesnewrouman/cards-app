@@ -2,7 +2,7 @@
   "name": "cards-app",
   "version": "2.0.0",
   "description": "Веб-страница с возможностью редактировая данных о пользователе и добавлении карточек с изображением.",
-  "main": "index.js",
+  "main": "script.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",

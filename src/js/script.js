@@ -1,12 +1,13 @@
-import '../pages/index.css';
+import '../index.css';
 import '../images/logo.svg';
 import '../images/close.svg';
-import {Api} from './Api.js';
-import {Card} from './Card.js';
-import {CardList} from './CardList.js';
-import {FormValidator} from './FormValidator.js';
-import {Popup} from './Popup.js';
-import {UserInfo} from './UserInfo.js';
+import { serverUrl } from './config.js';
+import { Api } from './Api.js';
+import { Card } from './Card.js';
+import { CardList } from './CardList.js';
+import { FormValidator } from './FormValidator.js';
+import { Popup } from './Popup.js';
+import { UserInfo } from './UserInfo.js';
 
 const placesList = document.querySelector('.places-list');
 const addButton = document.querySelector('.user-info__button');
@@ -29,9 +30,8 @@ export const ERROR_MESSAGES = {
   typeMismatch: 'Здесь должна быть ссылка'
 }
 
-const serverAddress = 'https://praktikum.tk/cohort8';
 const authorizationToken = 'a4338a35-a4f2-46d7-8cab-e17ed8973606';
-export const api = new Api(serverAddress, authorizationToken);
+export const api = new Api(serverUrl, authorizationToken);
 const createCard = (args) => new Card(args);
 const userInfo = new UserInfo(userPhoto, userName, userAbout, api);
 export const cardList = new CardList(placesList, createCard, api, userInfo);

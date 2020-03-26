@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+
 const isDev = process.env.NODE_ENV === 'development';
 
 new webpack.DefinePlugin({
@@ -11,7 +12,7 @@ new webpack.DefinePlugin({
 })
 
 module.exports = {
-    entry: { main: './js/script.js' },
+    entry: { main: './src/js/script.js' },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[chunkhash].js'
@@ -36,7 +37,7 @@ module.exports = {
             {
                 test: /\.(png|jpg|gif|ico|svg)$/,
                 use: [
-                    'file-loader?name=./images/[name].[ext]', // указали папку, куда складывать изображения
+                    'file-loader?name=./images/[name].[ext]',
                     {
                         loader: 'image-webpack-loader',
                         options: {}
@@ -63,7 +64,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             inject: false,
-            template: './index.html',
+            template: './src/index.html',
             filename: 'index.html'
         }),
         new WebpackMd5Hash()
