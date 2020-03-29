@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
 
 <body>
@@ -39,7 +39,8 @@
         <h3 class="popup__title">Обновить аватар</h3>
         <form class="popup__form" name="avatar">
           <div class='input-container'>
-            <input type="url" name="avatar" class="popup__input popup__input_type_avatar" placeholder="Ссылка на аватар" required minlength="2">
+            <input type="url" name="avatar" class="popup__input popup__input_type_avatar" placeholder="Ссылка на аватар"
+              required minlength="2">
             <div class="error" aria-live="polite"></div>
           </div>
           <button type="submit" id="+" class="button popup__button popup__button_save">Сохранить</button>
@@ -85,13 +86,7 @@
       </div>
     </div>
   </div>
-  <script src='./js/Card.js'></script>
-  <script src='./js/CardList.js'></script>
-  <script src='./js/Popup.js'></script>
-  <script src='./js/UserInfo.js'></script>
-  <script src='./js/FormValidator.js'></script>
-  <script src='./js/Api.js'></script>
-  <script src='./js/script.js'></script>
+  <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
 
 </html>

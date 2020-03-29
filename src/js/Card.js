@@ -1,4 +1,6 @@
-class Card {
+import { api } from "./script.js";
+
+export class Card {
   constructor(data) {
     this.data = data;
   }
@@ -37,14 +39,14 @@ class Card {
           alert("Couldn't remove like");
         });
     } else {
-      
+
       api.likeCard(card.getAttribute('cardId'))
-      .then(res => {
-        likeIcon.classList.add('place-card__like-icon_liked');
-      })
-      .catch(err => {
-        alert("Couldn't like card");
-      });;
+        .then(res => {
+          likeIcon.classList.add('place-card__like-icon_liked');
+        })
+        .catch(err => {
+          alert("Couldn't like card");
+        });;
     }
   }
 
@@ -59,7 +61,6 @@ class Card {
         })
         .catch(err => {
           alert("Couldn't remove card");
-          //return Promise.reject(`Ошибка: ${err.status}`);
         });
     }
   }

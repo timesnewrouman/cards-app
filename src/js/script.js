@@ -1,3 +1,14 @@
+import '../index.css';
+import '../images/logo.svg';
+import '../images/close.svg';
+import { serverUrl } from './config.js';
+import { Api } from './Api.js';
+import { Card } from './Card.js';
+import { CardList } from './CardList.js';
+import { FormValidator } from './FormValidator.js';
+import { Popup } from './Popup.js';
+import { UserInfo } from './UserInfo.js';
+
 const placesList = document.querySelector('.places-list');
 const addButton = document.querySelector('.user-info__button');
 const editButton = document.querySelector('.user-info__edit');
@@ -13,18 +24,17 @@ const userPhoto = document.querySelector('.user-info__photo');
 const userName = document.querySelector('.user-info__name');
 const userAbout = document.querySelector('.user-info__job');
 
-const ERROR_MESSAGES = {
+export const ERROR_MESSAGES = {
   valueMissing: 'Это обязательное поле',
   tooShort: 'Должно быть от 2 до 30 символов',
   typeMismatch: 'Здесь должна быть ссылка'
 }
 
-const serverAddress = 'https://praktikum.tk/cohort8';
 const authorizationToken = 'a4338a35-a4f2-46d7-8cab-e17ed8973606';
-const api = new Api(serverAddress, authorizationToken);
+export const api = new Api(serverUrl, authorizationToken);
 const createCard = (args) => new Card(args);
 const userInfo = new UserInfo(userPhoto, userName, userAbout, api);
-const cardList = new CardList(placesList, createCard, api, userInfo);
+export const cardList = new CardList(placesList, createCard, api, userInfo);
 
 formAdd.addEventListener('submit', function (event) {
   event.preventDefault();

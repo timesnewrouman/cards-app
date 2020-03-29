@@ -1,4 +1,6 @@
-class FormValidator {
+import { ERROR_MESSAGES } from "./script.js";
+
+export class FormValidator {
     static checkInputValidity(input, error) {
         for (let key in ERROR_MESSAGES) {
             if (input.validity[key]) {
