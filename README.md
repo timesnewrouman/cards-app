@@ -1,6 +1,6 @@
 # Yandex.Praktikum
 #### Жигайков Роман
-#### https://github.com/timesnewrouman/cards-app
+#### https://timesnewrouman.github.io/cards-app/
 ###### Спринт 11
 ###### Версия 1.1
 
