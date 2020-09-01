@@ -46,6 +46,7 @@ formAdd.addEventListener('submit', function (event) {
   };
   api.createCard(data.name, data.link)
     .then(res => {
+      data.cardId = res._id;
       cardList.addCard(data);
       formAdd.querySelector('.popup__button').style.fontSize = '36px';
       formAdd.querySelector('.popup__button').textContent = '+';
